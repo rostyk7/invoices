@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: invoice-generator
+    runtime: python
+    buildCommand: |
+      cd web
+      pip install -r requirements.txt
+      pip install -e ../lib/
+    startCommand: |
+      cd web
+      python -m uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.16
+

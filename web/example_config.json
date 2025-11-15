@@ -1,0 +1,55 @@
+{
+  "sender": {
+    "name": "Your Name",
+    "nip": "1234567890",
+    "bank_account_number": "PL 12 3456 7890 1234 5678 9012 3456",
+    "bic": "ABCDPLPR",
+    "account_holder_name": "YOUR NAME",
+    "address": "Your Address, City, Country",
+    "phone": "+48123456789",
+    "email": "your.email@example.com"
+  },
+  "invoice": {
+    "invoice_number": "INV001",
+    "date": "Dec 15, 2024",
+    "due_date": "Dec 31, 2024",
+    "service_end_date": "Nov 30, 2024"
+  },
+  "dates": {
+    "mode": "calculated",
+    "country": "PL",
+    "reference_date": null,
+    "due_date_config": {
+      "rule": "last_working_day_current_month",
+      "month_offset": 0
+    }
+  },
+  "bill_to": {
+    "company_name": "Client Company Ltd.",
+    "full_legal_name": "CLIENT COMPANY LIMITED",
+    "address": "Client Address, City, Country",
+    "vat_number": "PL 9876543210"
+  },
+  "line_items": [
+    {
+      "description": "Consulting Service",
+      "amount": 5000.00
+    },
+    {
+      "description": "Development Fee",
+      "amount": 10000.00
+    }
+  ],
+  "tax": {
+    "vat_rate": 23.0,
+    "apply_to_net": true
+  },
+  "currency": {
+    "code": "PLN",
+    "symbol": "zł"
+  },
+  "output": {
+    "filename": "invoice.pdf"
+  }
+}
+
