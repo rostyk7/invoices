@@ -9,6 +9,8 @@ Simple web interface for generating invoices using the invoice-generator library
 - Real-time validation
 - Generate and download PDF invoices
 - Example configuration loader
+- Database support (SQLite for dev, PostgreSQL for prod)
+- Invoice storage and management
 
 ## Setup
 
@@ -18,6 +20,19 @@ Simple web interface for generating invoices using the invoice-generator library
 cd web
 uv pip install -r requirements.txt
 ```
+
+### Database Configuration
+
+**Local Development (SQLite):**
+- ✅ **No configuration needed!** SQLite database will be created automatically at `web/invoices.db`
+- Just install dependencies and run the app
+
+**Optional Customization:**
+- Create a `.env` file in `web/` directory if you want to customize database path
+- Example: `SQLITE_DB_PATH=my_invoices.db`
+
+**For Production (PostgreSQL):**
+- See [DATABASE_SETUP.md](DATABASE_SETUP.md) for PostgreSQL setup
 
 ### Install Library from Local Path
 
@@ -73,6 +88,18 @@ Then open in browser: **http://localhost:8000**
 2. Paste your invoice configuration JSON (or click "Load Example Configuration")
 3. Click "Validate & Preview" to check your config
 4. Click "Generate Invoice PDF" to create and download the invoice
+
+## Database Migrations
+
+After installing dependencies, initialize the database:
+
+```bash
+cd web
+alembic revision --autogenerate -m "Initial migration"
+alembic upgrade head
+```
+
+The database is automatically initialized on app startup, but migrations are recommended for production.
 
 ## API Endpoints
 

@@ -39,6 +39,26 @@
             opacity: 0.9;
         }
 
+        .nav-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
         .card {
             background: white;
             border-radius: 12px;
@@ -167,6 +187,11 @@
         <div class="header">
             <h1>📄 Invoice Generator</h1>
             <p>Generate professional invoices from JSON configuration</p>
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Create New Invoice</a>
+            <a href="/invoices">View All Invoices</a>
         </div>
 
         <div class="card">

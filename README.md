@@ -45,18 +45,6 @@ Open http://localhost:8000 in your browser.
 
 See `web/README.md` for detailed documentation.
 
-### Deployment
-
-**🚀 Easiest Option:** See [QUICK_DEPLOY.md](QUICK_DEPLOY.md) for 5-minute deployment to Render.com (FREE with SSL)
-
-**Quick steps:**
-1. Push code to GitHub
-2. Sign up at Render.com (one click with GitHub)
-3. Connect repository → Auto-deploys with SSL
-4. Done! Get free HTTPS URL: `your-app.onrender.com`
-
-For other deployment options (Fly.io, Railway, etc.), see [DEPLOYMENT.md](DEPLOYMENT.md).
-
 ## Usage
 
 ### Markup Templates (New!)
