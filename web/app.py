@@ -16,8 +16,8 @@ from invoice_generator import generate_invoice
 
 from invoice_generator.invoice_calculator import calculate_totals
 from database import get_db, init_db, engine
-from models import Invoice, InvoiceTemplate
-from schemas import InvoiceResponse, InvoiceTemplateResponse
+from models import Invoice
+from schemas import InvoiceResponse
 from config import get_database_url
 
 app = FastAPI(title="Invoice Generator Web App")
